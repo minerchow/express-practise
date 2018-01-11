@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  ul
+    each val,index in ['a','b','c']
+      li=index+":"+val
+  ul
+    each val,index in [{'age':20},{'age':30}]
+      li=val.age
+
+  -var isGreen = true
+  -var isRed = false
+  div.is
+    if isGreen
+      div.green 绿色
+    else if isRed  
+      div.red 红色
+        

@@ -17,4 +17,13 @@ block content
       div.green 绿色
     else if isRed  
       div.red 红色
+  script(src='https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js')
+  script.
+    $.ajax({
+       method: "GET",
+       url:'/index/list'
+    }).done(function(result){
+      console.log(result.list)
+    })    
+         
         
